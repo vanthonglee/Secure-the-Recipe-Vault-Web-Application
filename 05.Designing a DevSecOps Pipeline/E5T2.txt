@@ -1,0 +1,34 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+- Checkove
+- TFLint
+- Terrafirma
+- Accurics
+- CloudSploit
+
+### Example vulnerability
+
+- Let's say you have an AWS CloudFormation template that provisions an Amazon S3 bucket with public read access. Checkov would scan the template and identify this as a potential security vulnerability. It would flag the bucket's access control configuration as non-compliant with security best practices.
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+- Trivy
+- Nessus
+- Clair
+
+### Example vulnerability
+
+Trivy would provide details about the vulnerability, including the CVE identifier associated with it. For example, it might identify the vulnerability as CVE-2021-XXXX
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+- AWS Config
+- AWS Inspector
+- AWS GuardDuty
+- AWS Security Hub  
+
+### Example vulnerability
+
+- Let's say you have an Amazon EC2 instance that is missing critical security patches. Security Hub might detect this as a vulnerability and generate an alert. It would provide details about the specific instance, the missing patches, and the potential risks associated with the vulnerability.

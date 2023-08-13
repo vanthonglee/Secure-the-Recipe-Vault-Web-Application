@@ -1,0 +1,18 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+- Use Strong Authentication:
+  + Disable password-based authentication for SSH access and use key-based authentication instead. This makes it significantly harder for attackers to brute force passwords.
+  + Use IAM roles and permissions to manage access to AWS resources.
+
+- Utilize a Bastion Host or Jump Server:
+  + Set up a separate EC2 instance (bastion host or jump server) that acts as a gateway for SSH access. This adds an extra layer of security by limiting direct access to your target instances.
+
+- Rate Limiting and Fail2Ban:
+  + Use tools like Fail2Ban to automatically detect and block repeated unsuccessful login attempts by temporarily adding offending IP addresses to the firewall rules. 
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+- Implement Object-Level Permissions: Instead of granting blanket access to the entire bucket, you can set up object-level permissions.
+- Enable Server-Side Encryption: This ensures that all objects stored in the bucket are automatically encrypted at rest
+- Implement Access Control Policies: Use AWS Identity and Access Management (IAM) policies to restrict access to the secret recipes bucket
+- Enable Multi-Factor Authentication (MFA): Implement MFA for accessing the secret recipes bucket.

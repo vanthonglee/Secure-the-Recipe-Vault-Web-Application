@@ -1,0 +1,10 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The EC2 instance has full priviledges to access S3 while it only needs the permission to get data from S3. This violation against least-priviledge principle can lead to unauthorized breach if EC2 instance is broken in illegally.
+
+# Poor practice 2
+The security configuration of the Web App should limit incoming traffic exclusively to the ALB SG, restricting access to specific ports(port 5000 only in this context).
+
+# Poor practice 3
+The web app should not be placed in public subnet

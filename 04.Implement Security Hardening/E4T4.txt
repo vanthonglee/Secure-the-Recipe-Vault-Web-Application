@@ -1,0 +1,16 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+
+Implement a Web Application Firewall (WAF): A WAF is a security measure that filters and monitors HTTP traffic between a web application and the internet. It helps to protect against common web application attacks, such as SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF). By implementing a WAF, you can detect and block malicious traffic before it reaches your web application instance.
+
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+Creating VPC private endpoints for S3 can help prevent unauthorized access to the secrets bucket, even if the IAM permissions for the bucket are insecure.
+
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+
+No, applying the default encryption setting to S3 buckets will not automatically encrypt the data that already exists in the buckets.
+
+# What would happen if the original cloud formation templates are applied to this environment.
+
+Everything will be reset

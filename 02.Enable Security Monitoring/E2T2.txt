@@ -1,0 +1,29 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+S3
+- S3 buckets should be encrypted at rest with AWS KMS keys [Medium]
+- S3 bucket server access logging should be enabled [Medium]
+- S3 buckets should require requests to use Secure Socket Layer [Medium]
+- S3 buckets should be configured to use Object Lock [Medium]
+- S3 buckets should have event notifications enabled [Medium]
+
+EC2
+- EC2 instances should not have a public IPv4 address [High]
+- Port range 0 to 65535 is reachable from an Internet Gateway - UDP [High]
+- Port range 0 to 65535 is reachable from an Internet Gateway - TCP [High]
+- EC2 instances should use Instance Metadata Service Version 2 (IMDSv2) [High]
+- EC2 instances should be managed by AWS Systems Manager [Medium]
+- Port 22 is reachable from an Internet Gateway - TCP [Medium]
+
+IAM User
+- MFA should be enabled for all IAM users that have a console password
+- MFA should be enabled for all IAM users
+- iam-user-no-policies-check-conformance-pack-5rh4idhbl
+- mfa-enabled-for-iam-console-access-conformance-pack-5rh4idhbl
+
+Recommendations on how to remediate the vulnerabilities:
+- Enable MFA 
+- S3: Enable encryption with AWS KMS
+- S3: Enable version control, enable Object Lock
+- EC2: should be placed in private subnet
+- EC2: Should be only open for specifics ports
